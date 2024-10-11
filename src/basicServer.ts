@@ -62,7 +62,7 @@ app.get('/incidents', (req: Request, res: Response) => {
 
 // GET an incident by ID
 app.get('/incidents/:id', (req: Request, res: Response) => {
-  const { id } = req.params;
+  const { id } = req.params; // don't need to check since already validated by
   const incident = incidents.find((incident) => incident.id === id);
   
   if (incident) {

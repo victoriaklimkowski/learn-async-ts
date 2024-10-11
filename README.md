@@ -7,6 +7,7 @@
 - Run a typescript file:
 
     `$ npx ts-node <path/to/file>`
+    `$ npx ts-node src/basicServer.ts`
 
 - Compile a typescript file:
 
