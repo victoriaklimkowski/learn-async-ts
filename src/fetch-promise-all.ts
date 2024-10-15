@@ -6,6 +6,8 @@ const fetchPromise_1 = fetch(url1);
 const fetchPromise_2 = fetch(url2);
 const fetchPromise_3 = fetch(url3);
   
+  // We use this if we don't care about the order of the responses.
+  // if we did we would use chaining with .then blocks. 
   Promise.all([fetchPromise_1, fetchPromise_2, fetchPromise_3])
     .then((responses: Response[]) => {
       for (const response of responses) {

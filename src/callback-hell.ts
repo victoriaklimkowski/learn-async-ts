@@ -15,6 +15,7 @@ function doStep1(init: number, callback: (result: number) => void) {
     callback(result);
   }
   
+  // This is the spagetti code part - anytime you nest functions like this. 
   function doOperation(init: number) {
     doStep1(init, (result1) => {
       doStep2(result1, (result2) => {
