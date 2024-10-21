@@ -54,9 +54,9 @@ const array2D_1 = [
 
 function sumRow(arr: number[][], rowIdx: number): Promise<number> {
     return new Promise((resolve, reject) => {
-        console.log('Sum row called ${row}');
+        console.log(`Sum row called ${rowIdx}`);
         let sum = 0;
-        for (let i = 0; i < arr.length; i++) {
+        for (let i = 0; i < arr[rowIdx].length; i++) {
             sum += arr[rowIdx][i];
         }
         resolve(sum);
@@ -88,6 +88,6 @@ async function calculateSum(numArr: number[][]) {
 }
 
 calculateSum(array2D_1).then((status) => { console.log('Status:', status); });
-calculateSum([]).catch((err) => { console.error("Error:", err); });
+// calculateSum([]).catch((err) => { console.error("Error:", err); });
 
 console.log("End of main thread");
